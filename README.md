@@ -16,6 +16,15 @@ pip install -r requirements.txt
 
 **ISIC2024_demo_GT**: ISIC2024_demo.csv can be found in this repo.
 
+## Running baselines
+
+```
+cd CNN_baselines
+bash run.sh
+```
+
+
+
 
 ## ISIC2024_demo.csv Statistics
 
