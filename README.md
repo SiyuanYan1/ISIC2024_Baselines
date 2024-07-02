@@ -112,4 +112,8 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 - Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
+###TODO
+- Evaluating ViT_base16_imagenet21k
+- Evaluating DINOv2_base
+
 
