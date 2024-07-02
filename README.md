@@ -85,5 +85,19 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 | ViDIR Group, Department of Dermatology, Medical University of Vienna | 668 | 14 |
 
 ## Evaluating baselines on ISIC2024_demo.csv
+test result using resnet50_non_weightedsample
+[[28615    17]
+[   33     0]]
+Test roc_auc: 0.861951| Spec : 0.999 | SEN : 0.000|Test bacc: 0.500
+
+test result using resnet50_weightedsample
+[[25969  2663]
+ [   13    20]]
+Test roc_auc: 0.855072| Spec : 0.907 | SEN : 0.606
+
+test result using effnet_weightedsample
+[[27237  1395]
+ [   18    15]]
+ Test roc_auc: 0.821604| Spec : 0.951 | SEN : 0.455
 
 
