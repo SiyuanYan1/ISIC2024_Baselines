@@ -84,20 +84,33 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 | University Hospital of Basel | 3,620 | 13 |
 | ViDIR Group, Department of Dermatology, Medical University of Vienna | 668 | 14 |
 
-## Evaluating baselines on ISIC2024_demo.csv
-test result using resnet50_non_weightedsample
-[[28615    17]
-[   33     0]]
-Test roc_auc: 0.861951| Spec : 0.999 | SEN : 0.000
+## Evaluating Baselines on ISIC2024_demo.csv
 
-test result using resnet50_weightedsample
-[[25969  2663]
- [   13    20]]
-Test roc_auc: 0.855072| Spec : 0.907 | SEN : 0.606
+### Test Results
 
-test result using effnet_weightedsample
-[[27237  1395]
- [   18    15]]
- Test roc_auc: 0.821604| Spec : 0.951 | SEN : 0.455
+| Model | Confusion Matrix | ROC AUC | Specificity | Sensitivity |
+|-------|------------------|---------|-------------|-------------|
+| ResNet50 (non-weighted) | [[28615, 17],<br>[33, 0]] | 0.861951 | 0.999 | 0.000 |
+| ResNet50 (weighted) | [[25969, 2663],<br>[13, 20]] | 0.855072 | 0.907 | 0.606 |
+| EfficientNet (weighted) | [[27237, 1395],<br>[18, 15]] | 0.821604 | 0.951 | 0.455 |
+
+### Initial Observations
+
+1. ISIC2024 presents a highly imbalanced machine learning task. Training a model using cross-entropy loss alone results in very low sensitivity.
+2. We found that simple random weighted sampling is very effective in alleviating this issue.
+3. Adjusting the prediction threshold should also be useful for improving sensitivity.
+
+### Key Findings
+
+- The non-weighted ResNet50 model achieves high specificity but fails to detect any malignant cases (0% sensitivity).
+- Weighted sampling significantly improves sensitivity for both ResNet50 and EfficientNet models.
+- The weighted ResNet50 model shows the best balance between specificity and sensitivity.
+- EfficientNet with weighted sampling performs well, but slightly less than the weighted ResNet50.
+
+### Future Directions
+
+- Experiment with different sampling techniques and loss functions designed for imbalanced datasets.
+- Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
+- Explore ensemble methods combining multiple models to potentially improve overall performance.
 
 
