@@ -88,7 +88,7 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 test result using resnet50_non_weightedsample
 [[28615    17]
 [   33     0]]
-Test roc_auc: 0.861951| Spec : 0.999 | SEN : 0.000|Test bacc: 0.500
+Test roc_auc: 0.861951| Spec : 0.999 | SEN : 0.000
 
 test result using resnet50_weightedsample
 [[25969  2663]
