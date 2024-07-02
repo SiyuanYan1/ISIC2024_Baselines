@@ -2,7 +2,8 @@
 
 
 
-This repo provides a quick start for the [ISIC2024 challenge](https://challenge2024.isic-archive.com/). The code offers baseline implementations and is for reference only. We evaluate representative baselines on a sample of the ISIC2024 datasets and explore some practical strategies. For details, see the ISIC2024_demo.csv Statistics and Evaluating Baselines section.
+
+This repo provides a quick start for the [ISIC2024 challenge](https://challenge2024.isic-archive.com/). It offers baseline implementations for reference. We evaluate representative baselines on a sample of the ISIC2024 dataset and explore practical strategies. For details, see the "ISIC2024_demo.csv Statistics" and "Evaluating Baselines on ISIC2024_demo.csv" sections.
 <p align="center">
   <img src="logo.png" alt="ISIC2024 Logo" width="1000">
 </p>
@@ -34,7 +35,7 @@ bash run.sh
 
 ## ISIC2024_demo.csv Statistics
 
-In this repo, we evaluate various models on a subset of ISIC2024, which contains 49,025 images out of 401,058 images, where the test set consists of all images from ACEMID MIA, train and val set contains images from all remaining
+In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,025 images out of the full 401,058 image dataset. The test set includes all images from ACEMID MIA, while the train and validation sets contain images sampled from the remaining attributions.
 
 
 ### Distribution by Split
