@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 ## Preparing datasets
 
-**ISIC2024_demo**: download ISIC2024 images from [here (SLICE-3D, it should contains 401,059 JPEG images)](https://challenge2024.isic-archive.com/)
+**ISIC2024_demo**: download ISIC2024 images from [here](https://challenge2024.isic-archive.com/) (SLICE-3D, it should contains 401,059 JPEG images)
 
 **ISIC2024_demo_GT**: ISIC2024_demo.csv can be found in this repo.
 
