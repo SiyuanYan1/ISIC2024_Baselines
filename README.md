@@ -45,6 +45,7 @@ In this repo, we evaluate vairousmodels on a subset of ISIC2024, which contains 
 
 | Split | Count |
 |-------|-------|
+| Total | 49,025 |
 | Test | 28,665 |
 | Train | 16,288 |
 | Validation | 4,072 |
