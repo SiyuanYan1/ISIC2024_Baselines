@@ -1,5 +1,6 @@
 # ISIC2024_Baselines
 
+This repo is for a quick start for the ISIC2024 challenge. Notice the code is only for demonstration purpose. We evalaute representative baselines on a sample of the whole datasets, please refer to ISIC2024_demo.csv Statistics section for details.
 ## Dataset Statistics
 
 - **Total samples:** 401,059
