@@ -3,8 +3,9 @@
 
 
 This repo provides a quick start for the [ISIC2024 challenge](https://challenge2024.isic-archive.com/). The code offers baseline implementations and is for reference only. We evaluate representative baselines on a sample of the ISIC2024 datasets and explore some practical strategies. For details, see the ISIC2024_demo.csv Statistics and Evaluating Baselines section.
- <img src="logo.png">
-
+<p align="center">
+  <img src="logo.png" alt="ISIC2024 Logo" width="900">
+</p>
 ## Installation
 Create the environment and install packages
 ```
