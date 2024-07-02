@@ -83,3 +83,7 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 | Memorial Sloan Kettering Cancer Center | 6,805 | 174 |
 | University Hospital of Basel | 3,620 | 13 |
 | ViDIR Group, Department of Dermatology, Medical University of Vienna | 668 | 14 |
+
+## Evaluating baselines on ISIC2024_demo.csv
+
+
