@@ -88,11 +88,11 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 
 ### Test Results
 
-| Model | Confusion Matrix | ROC AUC | Specificity | Sensitivity |
-|-------|------------------|---------|-------------|-------------|
-| ResNet50 (non-weighted) | TN: 28615, FP: 17<br>FN: 33, TP: 0 | 0.861951 | 0.999 | 0.000 |
-| ResNet50 (weighted) | TN: 25969, FP: 2663<br>FN: 13, TP: 20 | 0.855072 | 0.907 | 0.606 |
-| EfficientNet (weighted) | TN: 27237, FP: 1395<br>FN: 18, TP: 15 | 0.821604 | 0.951 | 0.455 |
+| Model | Confusion Matrix |  ROC AUC  | Specificity | Sensitivity |
+|-------|------------------|:---------:|:-----------:|:-----------:|
+| ResNet50 (non-weighted) | TN: 28615  FP: 17<br>FN: 33     TP: 0  | 0.861951 |   0.999   |   0.000   |
+| ResNet50 (weighted)     | TN: 25969  FP: 2663<br>FN: 13     TP: 20 | 0.855072 |   0.907   |   0.606   |
+| EfficientNet (weighted) | TN: 27237  FP: 1395<br>FN: 18     TP: 15 | 0.821604 |   0.951   |   0.455   |
 
 ### Initial Observations
 
