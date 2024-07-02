@@ -34,7 +34,7 @@ bash run.sh
 
 ## ISIC2024_demo.csv Statistics
 
-In this repo, we evaluate various models on a subset of ISIC2024, which contains 49,025 images out of 401,058 images. 
+In this repo, we evaluate various models on a subset of ISIC2024, which contains 49,025 images out of 401,058 images, where the test set consists of all images from ACEMID MIA, train and val set contains images from all remaining
 
 
 ### Distribution by Split
