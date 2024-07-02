@@ -90,9 +90,9 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 
 | Model | Confusion Matrix | ROC AUC | Specificity | Sensitivity |
 |-------|------------------|---------|-------------|-------------|
-| ResNet50 (non-weighted) | [[28615, 17],<br>[33, 0]] | 0.861951 | 0.999 | 0.000 |
-| ResNet50 (weighted) | [[25969, 2663],<br>[13, 20]] | 0.855072 | 0.907 | 0.606 |
-| EfficientNet (weighted) | [[27237, 1395],<br>[18, 15]] | 0.821604 | 0.951 | 0.455 |
+| ResNet50 (non-weighted) | TN: 28615, FP: 17<br>FN: 33, TP: 0 | 0.861951 | 0.999 | 0.000 |
+| ResNet50 (weighted) | TN: 25969, FP: 2663<br>FN: 13, TP: 20 | 0.855072 | 0.907 | 0.606 |
+| EfficientNet (weighted) | TN: 27237, FP: 1395<br>FN: 18, TP: 15 | 0.821604 | 0.951 | 0.455 |
 
 ### Initial Observations
 
@@ -103,9 +103,8 @@ This repo is for a quick start for the ISIC2024 challenge. Notice the code is on
 ### Key Findings
 
 - The non-weighted ResNet50 model achieves high specificity but fails to detect any malignant cases (0% sensitivity).
-- Weighted sampling significantly improves sensitivity for both ResNet50 and EfficientNet models.
+- Weighted sampling significantly improves sensitivity for models.
 - The weighted ResNet50 model shows the best balance between specificity and sensitivity.
-- EfficientNet with weighted sampling performs well, but slightly less than the weighted ResNet50.
 
 ### Future Directions
 
