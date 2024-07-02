@@ -6,6 +6,7 @@ This repo provides a quick start for the [ISIC2024 challenge](https://challenge2
 <p align="center">
   <img src="logo.png" alt="ISIC2024 Logo" width="1000">
 </p>
+
 ## Installation
 Create the environment and install packages
 ```
