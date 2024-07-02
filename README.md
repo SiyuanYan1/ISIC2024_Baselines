@@ -2,37 +2,24 @@
 
 This repo provides a quick start for the ISIC2024 challenge. The code offers baseline implementations and is for reference only. We evaluate representative baselines on a sample of the ISIC2024 datasets and explore some practical strategies. For details, see the ISIC2024_demo.csv Statistics and Evaluating Baselines section.
 
-## Dataset Statistics
+## Installation
+Create the environment and install packages
+```
+conda create -n env_name python=3.9 -y
+conda activate env_name
+pip install -r requirements.txt
+```
 
-- **Total samples:** 401,059
-- **Malignant samples:** 393
-- **Benign samples:** 400,666
+## Preparing datasets
 
-## Distribution by Attribution
+**ISIC2024_demo**: download ISIC2024 images from [here (SLICE-3D, it should contains 401,059 JPEG images)](https://challenge2024.isic-archive.com/)
 
-| Attribution | Count |
-|-------------|-------|
-| Memorial Sloan Kettering Cancer Center | 129,068 |
-| Department of Dermatology, Hospital Clínic de Barcelona | 105,724 |
-| University Hospital of Basel | 65,218 |
-| Frazer Institute, The University of Queensland, Dermatology Research Centre | 51,768 |
-| ACEMID MIA | 28,665 |
-| ViDIR Group, Department of Dermatology, Medical University of Vienna | 12,640 |
-| Department of Dermatology, University of Athens, Andreas Syggros Hospital of Skin and Venereal Diseases | 7,976 |
+**ISIC2024_demo_GT**: ISIC2024_demo.csv can be found in this repo.
 
-## Distribution of Binary Labels for Each Attribution
-
-| Attribution | Benign | Malignant |
-|-------------|--------|-----------|
-| ACEMID MIA | 28,632 | 33 |
-| Department of Dermatology, Hospital Clínic de Barcelona | 105,652 | 72 |
-| Department of Dermatology, University of Athens | 7,970 | 6 |
-| Frazer Institute, The University of Queensland | 51,687 | 81 |
-| Memorial Sloan Kettering Cancer Center | 128,894 | 174 |
-| University Hospital of Basel | 65,205 | 13 |
-| ViDIR Group, Department of Dermatology, Medical University of Vienna | 12,626 | 14 |
 
 ## ISIC2024_demo.csv Statistics
+
+In this repo, we evaluate vairousmodels on a subset of ISIC2024, which contains 49,025 images out of 401,058 images. 
 
 - **Total samples:** 49,025
 - **Test samples:** 28,665
