@@ -34,12 +34,8 @@ bash run.sh
 
 ## ISIC2024_demo.csv Statistics
 
-In this repo, we evaluate vairousmodels on a subset of ISIC2024, which contains 49,025 images out of 401,058 images. 
+In this repo, we evaluate various models on a subset of ISIC2024, which contains 49,025 images out of 401,058 images. 
 
-- **Total samples:** 49,025
-- **Test samples:** 28,665
-- **Train samples:** 16,288
-- **Validation samples:** 4,072
 
 ### Distribution by Split
 
@@ -107,7 +103,7 @@ In this repo, we evaluate vairousmodels on a subset of ISIC2024, which contains 
 ### Key Findings
 
 - The non-weighted ResNet50 model achieves high specificity but fails to detect any malignant cases (0% sensitivity).
-- Weighted sampling significantly improves sensitivity for models.
+- Weighted sampling significantly improves sensitivity for various models.
 - The weighted ResNet50 model shows the best balance between specificity and sensitivity.
 
 ### Future Directions
