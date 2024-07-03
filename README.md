@@ -90,6 +90,8 @@ In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,
 
 ### Test Results
 
+Model performance may vary depending on hardware. We conducted training and evaluation using NVIDIA RTX A6000 GPUs.
+
 | Model | Confusion Matrix |  ROC AUC  | Specificity | Sensitivity |
 |-------|------------------|:---------:|:-----------:|:-----------:|
 | ResNet50 (non-weighted) | TN: 26890  FP: 1742<br>FN: 31     TP: 2  | 0.7300 (±0.13)  |   0.9795 (±0.03)  |   0.0200 (±0.03)   |
