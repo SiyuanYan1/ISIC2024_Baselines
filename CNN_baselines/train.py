@@ -7,11 +7,12 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 import pandas as pd
 import numpy as np
 import os
-import wandb
 import time
+import wandb
 import datetime
 import warnings
 import random
+from sklearn.metrics import confusion_matrix
 import argparse
 from torch.utils.data import WeightedRandomSampler
 from metrics import compute_isic_metrics
@@ -25,15 +26,13 @@ def seed_everything(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)  # Add this line
     torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = True
+    torch.backends.cudnn.benchmark = False  # Change this to False
 
-
-seed_everything(47)
-
-# %% [code] {"jupyter":{"outputs_hidden":false}}
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+    # Add these lines
+    torch.use_deterministic_algorithms(True)
+    os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
 
 class Net(nn.Module):
     def __init__(self, arch, output_size=2):
@@ -43,7 +42,8 @@ class Net(nn.Module):
             self.arch.fc = nn.Linear(in_features=2048, out_features=output_size)
             input_size = 224
         if 'EfficientNet' in str(arch.__class__):
-            self.arch._fc = nn.Linear(in_features=1280, out_features=output_size)
+            # self.arch._fc = nn.Linear(in_features=1280, out_features=output_size)
+            self.arch._fc = nn.Linear(in_features=2560, out_features=output_size)
             input_size = 224
 
 
@@ -54,22 +54,18 @@ class Net(nn.Module):
 		"""
         x = inputs
         output = self.arch(x)
-        # meta_features = self.meta(meta)
-        # features = torch.cat((cnn_features, meta_features), dim=1)
-        # output = self.ouput(cnn_features)
         return output
 
 
 def main(args):
-    input_size = args.image_size
-    model_name = args.backbone
+    seed_everything(args.seed)
+    # %% [code] {"jupyter":{"outputs_hidden":false}}
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     if args.backbone == 'EfficientNet':
-        arch = EfficientNet.from_pretrained('efficientnet-b1')
-        input_size = 224
+        arch = EfficientNet.from_pretrained('efficientnet-b7')
     elif args.backbone == 'ResNet':
         arch = models.resnet50(pretrained=True)
-        input_size = 224
 
     epochs = args.epochs  # Number of epochs to run
     es_patience = 6  # Early Stopping patience - for how many epochs with no improvements to wait
@@ -250,15 +246,17 @@ def main(args):
     AUC_test,SEN_test, SPEC_test, BACC_test = compute_isic_metrics(labels, preds, args.log_dir,test=True)
 
     test_roc = AUC_test
-    print(
-        ' Test roc_auc: {:.6f}| Spec : {:.3f} | SEN : {:.3f}|Test bacc: {:.3f} '.format(
-            test_roc,
-            SPEC_test,
-            SEN_test,
-            BACC_test
-            ))
-
-    torch.save(test_predictions, os.path.join(args.log_dir, args.test_pt))
+    # print(
+    #     ' Test roc_auc: {:.6f}| Spec : {:.3f} | SEN : {:.3f}|Test bacc: {:.3f} '.format(
+    #         test_roc,
+    #         SPEC_test,
+    #         SEN_test,
+    #         BACC_test
+    #         ))
+    print(f"RESULTS,{args.seed},{test_roc},{SPEC_test},{SEN_test},{BACC_test}")
+    cm = confusion_matrix(labels.cpu().numpy(), test_preds_1d.cpu().numpy())
+    print(f"CONFUSION_MATRIX,{cm.ravel()[0]},{cm.ravel()[1]},{cm.ravel()[2]},{cm.ravel()[3]}")
+    # torch.save(test_predictions, os.path.join(args.log_dir, args.test_pt))
 
 
 if __name__ == '__main__':
@@ -297,6 +295,9 @@ if __name__ == '__main__':
     parser.add_argument('--wname', default='baseline_solar_res2', help='pt name')
     parser.add_argument('--runs', default='resnet_demo1.pth', help='run name')
     parser.add_argument('--weights', default=False, action='store_true', help='h1 or h2 as noisy data?')
+    # In your argument parser, add:
+    parser.add_argument('--seed', type=int, default=47, help='random seed')
+
     args = parser.parse_args()
     wandb.init(name=args.log_dir,
                project="ISIC2024",

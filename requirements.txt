@@ -7,4 +7,6 @@ Pillow==9.1.1
 wandb==0.13.5
 argparse==1.4.0
 efficientnet-pytorch==0.7.1
-timm
+transformers==4.40.1
+tqdm==4.65.2
+lightning-flash==0.8.2
