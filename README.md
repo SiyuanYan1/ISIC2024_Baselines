@@ -1,48 +1,48 @@
 # ISIC2024_Baselines
 
-This repo provides a quick start for the ISIC2024 challenge. The code offers baseline implementations and is for reference only. We evaluate representative baselines on a sample of the ISIC2024 datasets and explore some practical strategies. For details, see the ISIC2024_demo.csv Statistics and Evaluating Baselines section.
 
-## Dataset Statistics
 
-- **Total samples:** 401,059
-- **Malignant samples:** 393
-- **Benign samples:** 400,666
 
-## Distribution by Attribution
+This repo provides a quick start for the [ISIC2024 challenge](https://challenge2024.isic-archive.com/). It offers baseline implementations for reference. We evaluate representative baselines on a sample of the ISIC2024 dataset and explore practical strategies. For details, see the "ISIC2024_demo.csv Statistics" and "Evaluating Baselines on ISIC2024_demo.csv" sections.
+<p align="center">
+  <img src="logo.png" alt="ISIC2024 Logo" width="1000">
+</p>
 
-| Attribution | Count |
-|-------------|-------|
-| Memorial Sloan Kettering Cancer Center | 129,068 |
-| Department of Dermatology, Hospital Clínic de Barcelona | 105,724 |
-| University Hospital of Basel | 65,218 |
-| Frazer Institute, The University of Queensland, Dermatology Research Centre | 51,768 |
-| ACEMID MIA | 28,665 |
-| ViDIR Group, Department of Dermatology, Medical University of Vienna | 12,640 |
-| Department of Dermatology, University of Athens, Andreas Syggros Hospital of Skin and Venereal Diseases | 7,976 |
+## Installation
+Create the environment and install packages
+```
+conda create -n env_name python=3.9 -y
+conda activate env_name
+pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt
+```
 
-## Distribution of Binary Labels for Each Attribution
+## Preparing datasets
 
-| Attribution | Benign | Malignant |
-|-------------|--------|-----------|
-| ACEMID MIA | 28,632 | 33 |
-| Department of Dermatology, Hospital Clínic de Barcelona | 105,652 | 72 |
-| Department of Dermatology, University of Athens | 7,970 | 6 |
-| Frazer Institute, The University of Queensland | 51,687 | 81 |
-| Memorial Sloan Kettering Cancer Center | 128,894 | 174 |
-| University Hospital of Basel | 65,205 | 13 |
-| ViDIR Group, Department of Dermatology, Medical University of Vienna | 12,626 | 14 |
+**ISIC2024_demo**: download ISIC2024 images from [here](https://challenge2024.isic-archive.com/) (SLICE-3D, it should contains 401,059 JPEG images)
+
+**ISIC2024_demo_GT**: ISIC2024_demo.csv can be found in this repo.
+
+## Running baselines
+
+```
+cd CNN_baselines
+bash run.sh
+```
+
+
+
 
 ## ISIC2024_demo.csv Statistics
 
-- **Total samples:** 49,025
-- **Test samples:** 28,665
-- **Train samples:** 16,288
-- **Validation samples:** 4,072
+In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,025 images out of the full 401,058 image dataset. The test set includes all images from ACEMID MIA, while the train and validation sets contain images sampled from the remaining attributions.
+
 
 ### Distribution by Split
 
 | Split | Count |
 |-------|-------|
+| Total | 49,025 |
 | Test | 28,665 |
 | Train | 16,288 |
 | Validation | 4,072 |
@@ -91,9 +91,10 @@ This repo provides a quick start for the ISIC2024 challenge. The code offers bas
 
 | Model | Confusion Matrix |  ROC AUC  | Specificity | Sensitivity |
 |-------|------------------|:---------:|:-----------:|:-----------:|
-| ResNet50 (non-weighted) | TN: 28615  FP: 17<br>FN: 33     TP: 0  | 0.861951 |   0.999   |   0.000   |
-| ResNet50 (weighted)     | TN: 25969  FP: 2663<br>FN: 13     TP: 20 | 0.855072 |   0.907   |   0.606   |
-| EfficientNet (weighted) | TN: 27237  FP: 1395<br>FN: 18     TP: 15 | 0.821604 |   0.951   |   0.455   |
+| ResNet50 (non-weighted) | TN: 26890  FP: 1742<br>FN: 31     TP: 2  | 0.7300 (±0.13)  |   0.9795 (±0.03)  |   0.0200 (±0.03)   |
+| ResNet50 (weighted)     | TN: 24087  FP: 4545<br>FN: 10     TP: 23 | 0.8278 (±0.03)  |   0.8648 (±0.08)   |   0.6061 (±0.09)  |
+| EfficientNet-B1 (weighted) | TN: 26344  FP: 2288<br>FN: 15     TP: 18 | 0.8069 (±0.01) |   0.9366 (±0.001)   |   0.4848 (±0.08)   |
+| EfficientNet-B7 (weighted) | TN: 26790  FP: 1842<br>FN: 17     TP: 16 | 0.8538 (±0.04) |   0.9459 (±0.017)   |   0.4646 (±0.03)   |
 
 ### Initial Observations
 
@@ -104,7 +105,7 @@ This repo provides a quick start for the ISIC2024 challenge. The code offers bas
 ### Key Findings
 
 - The non-weighted ResNet50 model achieves high specificity but fails to detect any malignant cases (0% sensitivity).
-- Weighted sampling significantly improves sensitivity for models.
+- Weighted sampling significantly improves sensitivity for various models.
 - The weighted ResNet50 model shows the best balance between specificity and sensitivity.
 
 ### Future Directions
@@ -113,7 +114,7 @@ This repo provides a quick start for the ISIC2024 challenge. The code offers bas
 - Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
-###TODO
+### TODO
 - Evaluating ViT_base16_imagenet21k
 - Evaluating DINOv2_base
 
