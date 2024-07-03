@@ -23,12 +23,12 @@ pip install -r requirements.txt
 
 **ISIC2024_demo_GT**: ISIC2024_demo.csv can be found in this repo.
 
-## Running baselines: This will train and evaluate weighted ResNet50 with three different seeds
+## Running baselines: 
 
 ```
 cd CNN_baselines
+# This command will train and evaluate weighted ResNet50 with 3 different seeds.
 bash muti_run.sh
-```
 
 
 
