@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ```
 cd CNN_baselines
-bash run.sh
+bash muti_run.sh
 ```
 
 
