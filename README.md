@@ -93,7 +93,7 @@ In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,
 |-------|------------------|:---------:|:-----------:|:-----------:|
 | ResNet50 (non-weighted) | TN: 28615  FP: 17<br>FN: 33     TP: 0  | 0.861951 |   0.999   |   0.000   |
 | ResNet50 (weighted)     | TN: 24087  FP: 4545<br>FN: 10     TP: 23 | 0.8278 (±0.03)  |   0.8648 (±0.08)   |   0.6061 (±0.09)  |
-| EfficientNet (weighted) | TN: 27237  FP: 1395<br>FN: 18     TP: 15 | 0.821604 |   0.951   |   0.455   |
+| EfficientNet (weighted) | TN: 26344  FP: 2288<br>FN: 15     TP: 18 | 0.8069 (±0.006) |   0.9366 (±0.0008)   |   0.4848 (±0.08)   |
 
 ### Initial Observations
 
