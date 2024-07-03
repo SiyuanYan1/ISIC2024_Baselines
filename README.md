@@ -29,6 +29,7 @@ pip install -r requirements.txt
 cd CNN_baselines
 # This command will train and evaluate weighted ResNet50 with 3 different seeds.
 bash muti_run.sh
+```
 
 
 
