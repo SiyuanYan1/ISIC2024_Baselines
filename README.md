@@ -91,9 +91,10 @@ In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,
 
 | Model | Confusion Matrix |  ROC AUC  | Specificity | Sensitivity |
 |-------|------------------|:---------:|:-----------:|:-----------:|
-| ResNet50 (non-weighted) | TN: 26890  FP: 1742<br>FN: 31     TP: 2  | 0.861951 |   0.999   |   0.000   |
+| ResNet50 (non-weighted) | TN: 26890  FP: 1742<br>FN: 31     TP: 2  | 0.73 (±0.129)  |   0.9795 (±0.028)  |   0.02 (±0.029)   |
 | ResNet50 (weighted)     | TN: 24087  FP: 4545<br>FN: 10     TP: 23 | 0.8278 (±0.03)  |   0.8648 (±0.08)   |   0.6061 (±0.09)  |
-| EfficientNet (weighted) | TN: 26344  FP: 2288<br>FN: 15     TP: 18 | 0.8069 (±0.006) |   0.9366 (±0.0008)   |   0.4848 (±0.08)   |
+| EfficientNet-B1 (weighted) | TN: 26344  FP: 2288<br>FN: 15     TP: 18 | 0.8069 (±0.006) |   0.9366 (±0.0008)   |   0.4848 (±0.08)   |
+| EfficientNet-B7 (weighted) | TN: 26790  FP: 1842<br>FN: 17     TP: 16 | 0.8538 (±0.038) |   0.9459 (±0.017)   |   0.4646 (±0.03)   |
 
 ### Initial Observations
 
