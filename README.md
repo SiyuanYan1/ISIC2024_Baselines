@@ -98,6 +98,8 @@ Model performance may vary depending on hardware. We conducted training and eval
 | ResNet50 (weighted)     | TN: 24087  FP: 4545<br>FN: 10     TP: 23 | 0.8278 (±0.03)  |   0.8648 (±0.08)   |   0.6061 (±0.09)  |
 | EfficientNet-B1 (weighted) | TN: 26344  FP: 2288<br>FN: 15     TP: 18 | 0.8069 (±0.01) |   0.9366 (±0.001)   |   0.4848 (±0.08)   |
 | EfficientNet-B7 (weighted) | TN: 26790  FP: 1842<br>FN: 17     TP: 16 | 0.8538 (±0.04) |   0.9459 (±0.017)   |   0.4646 (±0.03)   |
+| ViT_base (weighted) | TN: 24664  FP: 4968<br>FN: 12     TP: 21 | 0.8342 (±0.05) |   0.8612 (±0.001)   |   0.4848 (±0.08)   |
+| EfficientNet-B7 (weighted) | TN: 26790  FP: 1842<br>FN: 17     TP: 16 | 0.8538 (±0.04) |   0.9459 (±0.017)   |   0.4646 (±0.03)   |
 
 ### Initial Observations
 
