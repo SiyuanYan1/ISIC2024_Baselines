@@ -90,7 +90,7 @@ In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,
 
 ### Test Results
 
-Model performance may vary depending on hardware.
+Model performance may vary depending on hardware. We conduct all experiments on single RTX6000Ada GPU.
 
 | Model | Confusion Matrix |  ROC AUC  | Specificity | Sensitivity |
 |-------|------------------|:---------:|:-----------:|:-----------:|
