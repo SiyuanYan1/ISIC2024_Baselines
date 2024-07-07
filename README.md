@@ -119,7 +119,7 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 
 - The non-weighted ResNet50 model achieves high specificity but fails to detect any malignant cases (0% sensitivity).
 - Weighted sampling significantly improves sensitivity for various models.
-- The weighted ResNet50 model shows the best balance between specificity and sensitivity.
+- The weighted ResNet50 and weighted ViT-base model shows the best balance between specificity and sensitivity.
 
 ### Future Directions
 
@@ -127,8 +127,5 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 - Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
-### TODO
-- Evaluating ViT_base16_imagenet21k
-- Evaluating DINOv2_base
 
 
