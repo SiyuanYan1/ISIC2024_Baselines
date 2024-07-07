@@ -28,7 +28,15 @@ pip install -r requirements.txt
 ```
 cd CNN_baselines
 # This command will train and evaluate weighted ResNet50 with 3 different seeds.
-bash muti_run.sh
+bash run_resnet50.sh
+```
+
+```
+cd ViT_baselines
+# This command will train and evaluate weighted ViT-base with 3 different seeds.
+bash run_vit.sh
+# This command will train and evaluate weighted DINOv2-base with 3 different seeds.
+bash run_dinov2.sh
 ```
 
 
@@ -111,7 +119,7 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 
 - The non-weighted ResNet50 model achieves high specificity but fails to detect any malignant cases (0% sensitivity).
 - Weighted sampling significantly improves sensitivity for various models.
-- The weighted ResNet50 model shows the best balance between specificity and sensitivity.
+- The weighted ResNet50 and weighted ViT-base model shows the best balance between specificity and sensitivity.
 
 ### Future Directions
 
@@ -119,8 +127,15 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 - Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
-### TODO
-- Evaluating ViT_base16_imagenet21k
-- Evaluating DINOv2_base
+## Credit
+The baselines are provided by the [AIM lab](https://www.monash.edu/it/aimh-lab) and [MMAI](https://www.monash.edu/mmai-group), led by A/Prof. [Zongyuan Ge](https://scholar.google.com.au/citations?user=Q0gUrcIAAAAJ&hl=en) from Monash University.
+
+#### Contributors
+
+- [Siyuan Yan](https://scholar.google.com/citations?user=LGcOLREAAAAJ&hl=en) (siyuan.yan@monash.edu.au)
+- [Zhonghua Wang](https://scholar.google.com/citations?hl=en&user=6I5t_3wAAAAJ)
+
+
+  
 
 
