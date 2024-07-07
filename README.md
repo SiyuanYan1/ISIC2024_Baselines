@@ -133,7 +133,7 @@ The baselines are provided by the [AIM lab](https://www.monash.edu/it/aimh-lab) 
 #### Contributors
 
 - [Siyuan Yan](https://scholar.google.com/citations?user=LGcOLREAAAAJ&hl=en) (siyuan.yan@monash.edu.au)
-- [Zhonghua Wang] (https://scholar.google.com/citations?hl=en&user=6I5t_3wAAAAJ)
+- [Zhonghua Wang](https://scholar.google.com/citations?hl=en&user=6I5t_3wAAAAJ)
 
 
   
