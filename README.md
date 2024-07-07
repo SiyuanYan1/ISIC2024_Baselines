@@ -28,7 +28,15 @@ pip install -r requirements.txt
 ```
 cd CNN_baselines
 # This command will train and evaluate weighted ResNet50 with 3 different seeds.
-bash muti_run.sh
+bash run_resnet50.sh
+```
+
+```
+cd ViT_baselines
+# This command will train and evaluate weighted ViT-base with 3 different seeds.
+bash run_vit.sh
+# This command will train and evaluate weighted DINOv2-base with 3 different seeds.
+bash run_dinov2.sh
 ```
 
 
