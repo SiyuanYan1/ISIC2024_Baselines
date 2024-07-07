@@ -8,15 +8,6 @@ This repo provides a quick start for the [ISIC2024 challenge](https://challenge2
   <img src="logo.png" alt="ISIC2024 Logo" width="1000">
 </p>
 
-## Credit
-
-The baselines are provided by AIM lab and MMAI from Monash University.
-
-#### Contributors
-
-- Siyuan Yan (siyuan.yan@monash.edu.au)
-- Zhonghua Wang
-  
 ## Installation
 Create the environment and install packages
 ```
@@ -136,7 +127,14 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 - Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
+## Credit
 
+The baselines are provided by AIM lab and MMAI from Monash University.
 
+#### Contributors
+
+- Siyuan Yan (siyuan.yan@monash.edu.au)
+- Zhonghua Wang
+  
 
 
