@@ -12,7 +12,7 @@ This repo provides a quick start for the [ISIC2024 challenge](https://challenge2
 
 The baselines are provided by AIM lab and MMAI from Monash University.
 
-### Contributors
+#### Contributors
 
 - Siyuan Yan (siyuan.yan@monash.edu.au)
 - Zhonghua Wang
