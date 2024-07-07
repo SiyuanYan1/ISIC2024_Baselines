@@ -127,7 +127,7 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
 ## Credit
-The baselines are provided by the [AIM lab](https://www.monash.edu/it/aimh-lab) and [MMAI](https://www.monash.edu/mmai-group), led by A/Prof. [Zongyuan Ge](https://scholar.google.com.au/citations?user=Q0gUrcIAAAAJ&hl=en) from Monash University.
+The baselines are provided by the [AIM lab](https://www.monash.edu/it/aimh-lab) and [MMAI](https://www.monash.edu/mmai-group), led by A/Prof. [Zongyuan Ge](https://scholar.google.com.au/citations?user=Q0gUrcIAAAAJ&hl=en) and Prof. [Victoria Mar](https://scholar.google.ca/citations?hl=en&user=v8jfXq0AAAAJ&view_op=list_works&sortby=pubdate) from Monash University.
 
 #### Contributors
 
