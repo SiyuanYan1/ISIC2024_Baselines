@@ -99,15 +99,14 @@ In this repo, we evaluate various models on a subset of ISIC2024, comprising 49,
 ### Test Results
 
 Model performance may vary depending on hardware. We conduct all experiments on single RTX6000Ada GPU.
-
-| Model |  ROC AUC  | Specificity | Sensitivity |
-|-------|:------------------|:---------:|:-----------:|:-----------:|
-| ResNet50 (non-weighted) | 0.7300 (±0.13)  |   0.9795 (±0.03)  |   0.0200 (±0.03)   |
-| ResNet50 (weighted)     |  0.8278 (±0.03)  |   0.8648 (±0.08)   |   0.6061 (±0.09)  |
-| EfficientNet-B1 (weighted) |  0.8069 (±0.01) |   0.9366 (±0.001)   |   0.4848 (±0.08)   |
-| EfficientNet-B7 (weighted) |  0.8538 (±0.04) |   0.9459 (±0.02)   |   0.4646 (±0.03)   |
-| ViT_base (weighted) |  0.8342 (±0.05) |   0.8612 (±0.11)   |   0.6465 (±0.12)   |
-| DINOv2-base (weighted) |  0.7437 (±0.24) |   0.6077 (±0.49)   |   0.7475 (±0.20)   |
+| Model | ROC AUC | Specificity | Sensitivity |
+|-------|---------|-------------|-------------|
+| ResNet50 (non-weighted) | 0.7300 (±0.13) | 0.9795 (±0.03) | 0.0200 (±0.03) |
+| ResNet50 (weighted) | 0.8278 (±0.03) | 0.8648 (±0.08) | 0.6061 (±0.09) |
+| EfficientNet-B1 (weighted) | 0.8069 (±0.01) | 0.9366 (±0.001) | 0.4848 (±0.08) |
+| EfficientNet-B7 (weighted) | 0.8538 (±0.04) | 0.9459 (±0.02) | 0.4646 (±0.03) |
+| ViT_base (weighted) | 0.8342 (±0.05) | 0.8612 (±0.11) | 0.6465 (±0.12) |
+| DINOv2-base (weighted) | 0.7437 (±0.24) | 0.6077 (±0.49) | 0.7475 (±0.20) |
 
 ### Initial Observations
 
