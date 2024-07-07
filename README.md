@@ -127,5 +127,9 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 - Fine-tune the prediction threshold to optimize the trade-off between specificity and sensitivity.
 - Explore ensemble methods combining multiple models to potentially improve overall performance.
 
+### Contributers
+- Siyuan Yan (siyuan.yan@monash.edu.au)
+- Zhonghua Wang
+
 
 
