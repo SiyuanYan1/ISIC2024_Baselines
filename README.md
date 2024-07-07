@@ -129,7 +129,7 @@ Model performance may vary depending on hardware. We conduct all experiments on 
 
 ## Credit
 
-The baselines are provided by AIM lab and MMAI from Monash University.
+The baselines are provided by [AIM lab](https://www.monash.edu/it/aimh-lab) and [MMAI](https://www.monash.edu/mmai-group) from Monash University.
 
 #### Contributors
 
